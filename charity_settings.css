@@ -1,0 +1,75 @@
+/* charity_settings.css */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: var(--dark-color);
+}
+
+.charity-dashboard-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.dashboard-card.settings-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-card form {
+        gap: 10px;
+    }
+
+    .logo-preview img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}

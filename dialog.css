@@ -1,0 +1,85 @@
+/* Dialog Box Styles */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.dialog-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dialog-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    text-align: center;
+    transform: translateY(-20px);
+    transition: transform 0.3s;
+}
+
+.dialog-overlay.active .dialog-box {
+    transform: translateY(0);
+}
+
+.dialog-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.dialog-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+.dialog-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.dialog-message {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.dialog-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dialog-button:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+}
